@@ -1,0 +1,344 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 CSLab Switch (Server):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for the Server\par
+interface GigabitEthernet0/1\par
+switchport mode access\par
+switchport access vlan 10\par
+switchport port-security\par
+switchport port-security maximum 1\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+AILab Switch (Printer 1):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for Printer 1\par
+interface GigabitEthernet0/2\par
+switchport mode access\par
+switchport access vlan 20\par
+switchport port-security\par
+switchport port-security maximum 1\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Lab3 Switch (Printer 2):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for Printer 2\par
+interface GigabitEthernet0/3\par
+switchport mode access\par
+switchport access vlan 30\par
+switchport port-security\par
+switchport port-security maximum 1\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+SmartLab Switch (Lab Devices in VLAN 40):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for LAB devices in VLAN 40\par
+interface range GigabitEthernet0/4-6\par
+switchport mode access\par
+switchport access vlan 40\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Lab5 Switch (Lab Devices in VLAN 50):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for LAB devices in VLAN 50\par
+interface range GigabitEthernet0/7-9\par
+switchport mode access\par
+switchport access vlan 50\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Lab4 Switch (Lab Devices in VLAN 60):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for LAB devices in VLAN 60\par
+interface range GigabitEthernet0/10-12\par
+switchport mode access\par
+switchport access vlan 60\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Lab6 Switch (Lab Devices in VLAN 70):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for LAB devices in VLAN 70\par
+interface range GigabitEthernet0/13-15\par
+switchport mode access\par
+switchport access vlan 70\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Faculty Switch (VLAN 80):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 80\par
+interface range GigabitEthernet0/16-18\par
+switchport mode access\par
+switchport access vlan 80\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Classroom Switch (VLAN 90):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 90\par
+interface range GigabitEthernet0/19-21\par
+switchport mode access\par
+switchport access vlan 90\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+ITRoom Switch (VLAN 100):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 100\par
+interface range GigabitEthernet0/22-24\par
+switchport mode access\par
+switchport access vlan 100\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+GamingLab Switch (VLAN 110):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 110\par
+interface range GigabitEthernet0/25-27\par
+switchport mode access\par
+switchport access vlan 110\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+AcademicDep Switch (VLAN 120):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 120\par
+interface range GigabitEthernet0/28-30\par
+switchport mode access\par
+switchport access vlan 120\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Administration Switch (VLAN 130):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 130\par
+interface range GigabitEthernet0/31-32\par
+switchport mode access\par
+switchport access vlan 130\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Faculty Switch 99 (VLAN 200):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 200\par
+interface range GigabitEthernet0/1-3\par
+switchport mode access\par
+switchport access vlan 200\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Classroom Switch 99 (VLAN 201):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 201\par
+interface range GigabitEthernet0/4-6\par
+switchport mode access\par
+switchport access vlan 201\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+ExaminationDep Switch 99 (VLAN 202):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 202\par
+interface range GigabitEthernet0/7-9\par
+switchport mode access\par
+switchport access vlan 202\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+AcademicDep Switch 99 (VLAN 203):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 203\par
+interface range GigabitEthernet0/10-12\par
+switchport mode access\par
+switchport access vlan 203\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+ITDep Switch 99 (VLAN 204):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 204\par
+interface range GigabitEthernet0/13-15\par
+switchport mode access\par
+switchport access vlan 204\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+DataCenter Switch 99 (VLAN 205):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 205\par
+interface range GigabitEthernet0/16-18\par
+switchport mode access\par
+switchport access vlan 205\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+Administration Switch 99 (VLAN 206):\par
+bash\par
+Copy code\par
+enable\par
+configure terminal\par
+\par
+# Configure Port Security for devices in VLAN 206\par
+interface range GigabitEthernet0/19-21\par
+switchport mode access\par
+switchport access vlan 206\par
+switchport port-security\par
+switchport port-security maximum 2\par
+switchport port-security mac-address sticky\par
+switchport port-security violation restrict\par
+no shutdown\par
+\par
+end\par
+}
+ 

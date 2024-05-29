@@ -1,0 +1,121 @@
+Certainly! Here are the commands extracted from the lab with their respective headings:
+
+### Part 1: Verify the Default Switch Configuration
+#### Step 1: Enter privileged mode.
+```
+Switch> enable
+Switch#
+```
+
+#### Step 2: Examine the current switch configuration.
+```
+Switch# show running-config
+```
+
+### Part 2: Configure a Basic Switch Configuration
+#### Step 1: Assign a name to a switch.
+```
+Switch# configure terminal
+Switch(config)# hostname S1
+S1(config)# exit
+```
+
+#### Step 2: Secure access to the console line.
+```
+S1# configure terminal
+S1(config)# line console 0
+S1(config-line)# password letmein
+S1(config-line)# login
+S1(config-line)# exit
+S1(config)# exit
+```
+
+#### Step 3: Verify that console access is secured.
+```
+S1# exit
+```
+
+#### Step 4: Secure privileged mode access.
+```
+S1> enable
+S1# configure terminal
+S1(config)# enable password c1$c0
+S1(config)# exit
+```
+
+#### Step 5: Verify that privileged mode access is secure.
+```
+S1# exit
+```
+
+#### Step 6: Configure an encrypted password to secure access to privileged mode.
+```
+S1# config t
+S1(config)# enable secret itsasecret
+S1(config)# exit
+```
+
+#### Step 7: Verify that the enable secret password is added to the configuration file.
+```
+S1# show running-config
+```
+
+#### Step 8: Encrypt the enable and console passwords.
+```
+S1# config t
+S1(config)# service password-encryption
+S1(config)# exit
+```
+
+### Part 3: Configure a MOTD Banner
+#### Step 1: Configure a message of the day (MOTD) banner.
+```
+S1# config t
+S1(config)# banner motd "This is a secure system. Authorized Access Only!"
+S1(config)# exit
+```
+
+### Part 4: Save Configuration Files to NVRAM
+#### Step 1: Verify that the configuration is accurate using the show run command.
+```
+S1# show running-config
+```
+
+#### Step 2: Save the configuration file.
+```
+S1# copy running-config startup-config
+[Enter]
+```
+
+### Part 5: Configure S2
+#### Configure S2 with the following parameters:
+```
+Switch# configure terminal
+Switch(config)# hostname S2
+S2(config)# exit
+
+S2# configure terminal
+S2(config)# line console 0
+S2(config-line)# password letmein
+S2(config-line)# login
+S2(config-line)# exit
+S2(config)# exit
+
+S2# configure terminal
+S2(config)# enable password c1$c0
+S2(config)# enable secret itsasecret
+S2(config)# exit
+
+S2# configure terminal
+S2(config)# banner motd "Authorized access only. Unauthorized access is prohibited and violators will be prosecuted to the full extent of the law."
+S2(config)# exit
+
+S2# configure terminal
+S2(config)# service password-encryption
+S2(config)# exit
+
+S2# show running-config
+
+S2# copy running-config startup-config
+[Enter]
+```
